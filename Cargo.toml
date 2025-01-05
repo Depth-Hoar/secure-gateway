@@ -6,11 +6,13 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-tokio = { version = "1.32", features = ["rt-multi-thread", "macros"] }
+http = "1.0"
+tokio = { version = "1.32", features = ["full"] }
 axum = "0.6"
 tower = "0.4"
-# tower-http = { version = "0.4.4", features = ["trace", "compression", "auth"] }
-tower-http = "0.4.4"
+# tower-http = { version = "0.6.2", features = ["trace", "compression", "auth"] }
+tower-http = { version = "0.6.2", features = ["full"] }
+# tower-http = "0.4.4"
 hyper = "0.14"
 rustls = "0.21"
 jsonwebtoken = "9.3.0"

@@ -57,6 +57,7 @@ cargo-check
 cargo-clippy
 
 # 🛡️ Security
+/certs
 .env
 secrets.toml
 
