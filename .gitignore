@@ -1,0 +1,65 @@
+# 📦 Rust build output
+/target
+/Cargo.lock
+
+# 🚀 Release binaries
+**/*.rs.bk
+
+# 🧪 Test output
+/tests/output
+
+# 🛠️ Build artifacts
+*.rlib
+*.dSYM
+*.so
+*.dll
+*.dylib
+
+# 📚 Documentation
+/doc/
+
+# 🐍 Python virtualenv (if used for scripting)
+venv/
+__pycache__/
+
+# ⚙️ IDEs and Editors
+.idea/
+.vscode/
+*.iml
+
+# 🖥️ macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ⚙️ macOS ._* files (metadata)
+._*
+
+# 📜 Logs and temp files
+*.log
+*.tmp
+*.swp
+*.sublime-project
+*.sublime-workspace
+
+# 📊 Profiling data
+*.profdata
+
+# 🧠 Debugging artifacts
+*.gcda
+*.gcno
+
+# ⚡ Rust analyzer
+rust-project.json
+
+# 🔍 Cargo check and clippy artifacts
+cargo-check
+cargo-clippy
+
+# 🛡️ Security
+.env
+secrets.toml
+
+# 🗑️ Misc
+*.bak
+*~
