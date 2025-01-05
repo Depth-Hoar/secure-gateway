@@ -3,9 +3,10 @@
 use axum::{
   async_trait,
   http::{Request, StatusCode},
-  middleware::Next,
+  middleware::{Next, from_fn},
   response::{IntoResponse, Response},
-  extract::{FromRequestParts, TypedHeader},
+// //   extract::{FromRequestParts, TypedHeader},
+//   extract::{FromRequestParts, http::HeaderMap},
 };
 use http::request::Parts;
 use jsonwebtoken::{decode, encode, DecodingKey, EncodingKey, Header, Validation};
@@ -43,8 +44,8 @@ impl UserToken {
 }
 
 /// Middleware that checks if request has valid JWT in the Authorization header
-pub fn jwt_auth_middleware<S>() -> axum::middleware::Middleware<S> {
-  axum::middleware::from_fn(authenticate_request)
+pub fn jwt_auth_middleware() -> axum::middleware::FromFnLayer<fn(Request<Body>, Next<Body>) -> Response> {
+    from_fn(authenticate_request)
 }
 
 /// The actual function used by Axum’s middleware

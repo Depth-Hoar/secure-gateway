@@ -13,8 +13,9 @@ tower = "0.4"
 # tower-http = { version = "0.6.2", features = ["trace", "compression", "auth"] }
 tower-http = { version = "0.6.2", features = ["full"] }
 # tower-http = "0.4.4"
-hyper = "0.14"
+hyper = { version = "0.14", features = ["full"] }
 rustls = "0.21"
+tokio-rustls = "0.24"
 jsonwebtoken = "9.3.0"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
