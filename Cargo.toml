@@ -9,12 +9,15 @@ edition = "2021"
 http = "1.0"
 tokio = { version = "1.32", features = ["full"] }
 axum = "0.6"
+axum-server = { version = "0.2.6", features = ["tls-rustls"] }
 tower = "0.4"
 # tower-http = { version = "0.6.2", features = ["trace", "compression", "auth"] }
-tower-http = { version = "0.6.2", features = ["full"] }
+tower-http = { version = "0.4", features = ["full"] }
 # tower-http = "0.4.4"
 hyper = { version = "0.14", features = ["full"] }
 rustls = "0.21"
+rustls-pemfile = "1.0"    # For loading cert/key from .pem files
+futures-util = "0.3"      # For map_ok, TryStreamExt if you do streaming
 tokio-rustls = "0.24"
 jsonwebtoken = "9.3.0"
 serde = { version = "1.0", features = ["derive"] }
